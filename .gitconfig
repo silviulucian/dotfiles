@@ -1,7 +1,7 @@
 [user]
 	name = Lucian Văcăroiu
 	email = silviulucian@gmail.com
-	
+
 [alias]
 	a = !"git config --get-regexp alias | cut -c 7- | sed 's| | => |'"
 	b = branch
@@ -25,12 +25,12 @@
 # Detect whitespace errors when applying a patch
 [apply]
 	whitespace = fix
-	
+
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
-	
+
 [branch]
 	autosetuprebase = always # Avoid superfluous merge commits)
 
@@ -45,7 +45,7 @@
 
 [rebase]
 	autosquash = true # Always use git rebase --interactive --autosquash: https://robots.thoughtbot.com/autosquashing-git-commits
-	
+
 [merge]
 	log = true # Include summaries of merged commits in newly created merge commit messages
 
@@ -58,8 +58,7 @@
 
 	# Tell git status to ignore permission changes
 	filemode = false
-	editor = nano
-	
+
 # Use colors in Git commands that are capable of colored output when outputting to the terminal
 [color]
   branch = auto
@@ -80,7 +79,7 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-	
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
