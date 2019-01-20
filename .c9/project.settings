@@ -2,6 +2,10 @@
     "ace": {
         "@tabSize": 2
     },
+    "build": {
+        "@builder": "auto",
+        "@saveall": true
+    },
     "general": {
         "@stripws": true
     },
