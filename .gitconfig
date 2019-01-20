@@ -4,10 +4,12 @@
 	
 [alias]
 	a = !"git config --get-regexp alias | cut -c 7- | sed 's| | => |'"
-	b = branch -a
-	co = checkout -B # Switch to a branch, creating it if necessary
-	c = commit -v
-	ci = commit
+	b = branch
+	ba = branch -a
+	co = checkout
+	cob = checkout -B # Switch to a branch, creating it if necessary
+	c = commit
+	cv = commit -v
 	p = !"git pull; git submodule foreach git pull origin master" # Pull in remote changes for the current repository and all its submodules
 	pr = pull --rebase
 	pf = push --force-with-lease

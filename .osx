@@ -1,2 +1,2 @@
-# OSX: disable accented characters popup when long pressing a key
+# Disable accented characters popup when long pressing a key
 defaults write -g ApplePressAndHoldEnabled -bool false
