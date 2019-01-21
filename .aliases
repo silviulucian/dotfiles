@@ -1,7 +1,6 @@
 # App shortcuts
 alias be="bundle exec"
 alias bi="bundle install"
-alias ror="bundle exec rails"
 alias python=python27
 
 # Easier navigation: .., ..., ...., ....., ~ and -
