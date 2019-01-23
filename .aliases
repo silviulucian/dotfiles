@@ -1,6 +1,7 @@
 # App shortcuts
 alias be="bundle exec"
 alias bi="bundle install"
+alias codepipeline="aws codepipeline start-pipeline-execution --name"
 alias python=python27
 
 # Easier navigation: .., ..., ...., ....., ~ and -
