@@ -12,6 +12,9 @@
 # Sorts the found files lexicographically.
 --sort-files
 
+# Show more context around seach result
+--context=7
+
 --ignore-dir=.c9
 --ignore-dir=.git
 --ignore-dir=.idea
