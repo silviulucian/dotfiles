@@ -18,4 +18,5 @@
 --ignore-dir=.c9
 --ignore-dir=.git
 --ignore-dir=.idea
+--ignore-dir=.webpack
 --ignore-dir=node_modules
