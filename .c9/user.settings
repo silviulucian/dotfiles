@@ -7,8 +7,8 @@
         "@showGutter": true,
         "@showInvisibles": true,
         "@showLineNumbers": "relative",
-        "@theme": "ace/theme/cloud9_day",
-        "@wrapBehavioursEnabled": false,
+        "@theme": "ace/theme/monokai",
+        "@wrapBehavioursEnabled": true,
         "custom-types": {
             "json()": {
                 "^Untitled": "json",
@@ -41,15 +41,16 @@
         "@pause": 0
     },
     "findinfiles": {
-        "@fullpath": false,
+        "@fullpath": true,
         "@scrolldown": true
     },
     "general": {
         "@confirmexit": false,
         "@preview-navigate": false,
-        "@preview-tree": false,
+        "@preview-tree": true,
         "@revealfile": true,
-        "@skin": "flat-light"
+        "@skin": "dark",
+        "@treestyle": "default"
     },
     "language": {
         "@overrideMultiselectShortcuts": true
@@ -58,15 +59,16 @@
         "@show": true
     },
     "output": {
-        "@backgroundColor": "#e0e5e7",
-        "@foregroundColor": "#333333",
-        "@selectionColor": "#aebabf",
+        "@backgroundColor": "#003a58",
+        "@foregroundColor": "#FFFFFF",
+        "@selectionColor": "#225477",
         "nosavequestion": {
             "json()": true
         }
     },
     "preview": {
-        "@running_app": true
+        "@running_app": true,
+        "@default": "preview.browser"
     },
     "projecttree": {
         "@scope": true,
@@ -79,14 +81,17 @@
         "@title": false
     },
     "terminal": {
-        "@antialiasedfonts": false,
-        "@backgroundColor": "#eaf0f7",
+        "@antialiasedfonts": true,
+        "@backgroundColor": "#153649",
         "@collab": "",
-        "@foregroundColor": "#000000",
+        "@foregroundColor": "#FFFFFF",
         "@scrollback": 10000,
-        "@selectionColor": "#bed1e3",
+        "@selectionColor": "#515D77",
         "noclosequestion": {
             "json()": true
         }
+    },
+    "metadata": {
+        "@undolimit": 1000
     }
 }
