@@ -48,9 +48,10 @@
         "@confirmexit": false,
         "@preview-navigate": false,
         "@preview-tree": true,
-        "@revealfile": true,
+        "@revealfile": false,
         "@skin": "dark",
-        "@treestyle": "default"
+        "@treestyle": "alternative",
+        "@animateui": false
     },
     "language": {
         "@overrideMultiselectShortcuts": true
