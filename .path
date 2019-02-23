@@ -1,7 +1,1 @@
-PATH=/usr/local/bin:$PATH
-
-PATH=$HOME/.local/bin:$HOME/bin:$PATH
-
-PATH=$HOME/.yarn/bin:$PATH
-
-export PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin

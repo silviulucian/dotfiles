@@ -1,9 +1,16 @@
 # modifications needed only in interactive mode
 if [ "$PS1" != "" ]; then
+  # Case-insensitive globbing (used in pathname expansion)
+  shopt -s nocaseglob
+
+  # Autocorrect typos in path names when using `cd`
+  shopt -s cdspell
+
   # Turn on checkwinsize
   shopt -s checkwinsize
 
-  # keep more history
+  # Append to the Bash history file, rather than overwriting it
+  # check .exports for related env exports
   shopt -s histappend
 
   # Source for Git PS1 function
