@@ -1,8 +1,5 @@
-# App shortcuts
-alias be="bundle exec"
-alias bi="bundle install"
-alias codepipeline="aws codepipeline start-pipeline-execution --name"
-alias python=python27
+#
+# Aliases for core functinality
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -27,8 +24,14 @@ alias l="ls ${colorflag}"
 alias ll="ls -l ${colorflag}"
 alias la="ls -la ${colorflag}"
 
+# 
+# Misc aliases
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+# Run AWS CodePipeline by name
+alias codepipeline="aws codepipeline start-pipeline-execution --name"
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
@@ -36,7 +39,7 @@ alias gurl='curl --compressed'
 # Get week number
 alias week='date +%V'
 
-# IP addresses
+# IP addresses utils
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
