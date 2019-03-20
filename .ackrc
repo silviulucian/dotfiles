@@ -13,7 +13,7 @@
 --sort-files
 
 # Show more context around seach result
---context=7
+--context=3
 
 --ignore-dir=.c9
 --ignore-dir=.git
