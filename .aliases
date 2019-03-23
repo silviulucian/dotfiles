@@ -24,11 +24,17 @@ alias l="ls ${colorflag}"
 alias ll="ls -l ${colorflag}"
 alias la="ls -la ${colorflag}"
 
-# 
-# Misc aliases
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+#
+# Misc aliases
+
+# Save on typing git all the time
+alias g="git"
+
+# Run git commands with `gr @all`
+alias grall="gr @all"
 
 # Run AWS CodePipeline by name
 alias codepipeline="aws codepipeline start-pipeline-execution --name"
