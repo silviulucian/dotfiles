@@ -1,0 +1,5 @@
+// Edit this keymap file and save to apply.
+[
+    { "command": "nosplit", "keys": { "mac": ["Cmd-Alt-1"] } },
+    { "command": "twohsplit", "keys": { "mac": ["Cmd-Alt-2"] } }
+]
