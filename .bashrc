@@ -2,9 +2,9 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/bin
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
-[ "$BASH_VERSION" ] && npm() { 
+[ "$BASH_VERSION" ] && npm() {
   # hack: avoid slow npm sanity check in nvm
-  if [ "$*" == "config get prefix" ]; then which node | sed "s/bin\/node//"; 
+  if [ "$*" == "config get prefix" ]; then which node | sed "s/bin\/node//";
   else $(which npm) "$@"; fi
 }
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -16,9 +16,6 @@ alias python=python27
 
 # modifications needed only in interactive mode
 if [ "$PS1" != "" ]; then
-  # Set default editor for git
-  git config --global core.editor /usr/bin/nano
-
   # Turn on checkwinsize
   shopt -s checkwinsize
 
