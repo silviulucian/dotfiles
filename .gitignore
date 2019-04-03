@@ -184,8 +184,8 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.test
+# .env
+# .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -229,9 +229,6 @@ config/master.key
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
-
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
 
 ## Environment normalization:
 /.bundle
