@@ -12,6 +12,7 @@
   p = !"git pull; git submodule foreach git pull origin master" # Pull in remote changes for the current repository and all its submodules
   pr = pull --rebase
   pf = push --force-with-lease
+  puo = push origin
   r = rebase
   ri = rebase --interactive
   s = status --short --branch
