@@ -1,8 +1,9 @@
 {
     "ace": {
         "@antialiasedfonts": false,
-        "@behavioursEnabled": true,
+        "@behavioursEnabled": false,
         "@cursorStyle": "ace",
+        "@fontSize": 12,
         "@keyboardmode": "vim",
         "@showGutter": true,
         "@showInvisibles": true,
