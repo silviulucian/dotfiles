@@ -8,7 +8,7 @@
         "@showGutter": true,
         "@showInvisibles": true,
         "@showLineNumbers": "relative",
-        "@theme": "ace/theme/solarized_light",
+        "@theme": "ace/theme/cloud9_day",
         "@wrapBehavioursEnabled": true,
         "custom-types": {
             "json()": {
