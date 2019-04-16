@@ -15,6 +15,4 @@
 *.min.js
 .nakignore
 /dev
-MahCloud9Dotfiles
 node_modules
-phpMyAdmin*
