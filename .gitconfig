@@ -59,6 +59,9 @@
   # Tell git status to ignore permission changes
   filemode = false
 
+  # Custom hooks path
+  hooksPath = .githooks
+
 # Use colors in Git commands that are capable of colored output when outputting to the terminal
 [color]
   branch = auto
