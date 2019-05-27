@@ -1,0 +1,10 @@
+windows:
+  - name: home
+    root: ~
+    layout: main-vertical # https://github.com/remiprev/teamocil#examples
+    panes:
+      - echo "left"
+      - echo "right"
+      - commands:
+        - echo "left"
+        - time
