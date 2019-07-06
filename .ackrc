@@ -15,7 +15,6 @@
 # Show more context around seach result
 --context=3
 
---ignore-dir=.c9
 --ignore-dir=.git
 --ignore-dir=.idea
 --ignore-dir=.webpack

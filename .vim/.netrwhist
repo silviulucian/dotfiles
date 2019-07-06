@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/silviulucian/.oh-my-zsh'
-let g:netrw_dirhist_2='/Users/silviulucian/Sync/.sync'
-let g:netrw_dirhist_3='/Users/silviulucian/.vim/colors'
-let g:netrw_dirhist_4='/Users/silviulucian/dotfiles'
-let g:netrw_dirhist_5='/Users/silviulucian/Sync/Projects/dotfiles'

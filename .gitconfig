@@ -10,13 +10,10 @@
   cob = checkout -B # Switch to a branch, creating it if necessary
   c = commit -v
   p = !"git pull; git submodule foreach git pull origin master" # Pull in remote changes for the current repository and all its submodules
-  pr = pull --rebase
   pf = push --force-with-lease
-  puo = push origin
-  r = rebase
+  po = push origin
   ri = rebase --interactive
-  s = status --short --branch
-  st = status
+  s = status
   l = log --abbrev-commit --all --graph --decorate --date=relative
   unstage = reset HEAD --
   uncommit = reset --soft HEAD^ --
