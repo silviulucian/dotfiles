@@ -1,3 +1,3 @@
 function nvm
-   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+   bass source $HOME/.nvm/nvm.sh --no-use ';' nvm $argv
 end
