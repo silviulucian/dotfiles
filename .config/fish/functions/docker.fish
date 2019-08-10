@@ -10,4 +10,3 @@ end
 function docker-run
    docker-compose run $argv
 end
-
