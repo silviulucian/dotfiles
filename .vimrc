@@ -43,7 +43,7 @@ set number
 " Enable syntax highlighting
 syntax on
 " Enable Mac Classic color-scheme
-colorscheme mac_classic
+colorscheme monokai
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
