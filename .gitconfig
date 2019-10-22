@@ -90,4 +90,4 @@
   process = git-lfs filter-process
   required = true
 [commit]
-	gpgSign = false
+  gpgSign = false
