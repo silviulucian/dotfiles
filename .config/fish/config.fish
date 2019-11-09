@@ -6,3 +6,4 @@ set -U fish_user_paths $NVM_DIR/bin $HOME/.yarn/bin $HOME/.config/yarn/global/no
 
 nvm use default --silent
 rvm default > /dev/null 2>&1
+

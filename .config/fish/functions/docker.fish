@@ -3,8 +3,9 @@ function docker-kill-all
 end
 
 function docker-rm-all
-   docker rm (docker ps -a -q) # remove all containers
-   docker rmi (docker images -q) # remove all docker images
+   docker rm -f (docker ps -a -q) --force # remove all containers
+   docker rmi -f (docker images -q) --force # remove all docker images
+   docker system prune --volumes --force # remove everything inbetween
 end
 
 function docker-run
