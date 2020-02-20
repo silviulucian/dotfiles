@@ -11,3 +11,7 @@ end
 function docker-run
    docker-compose run $argv
 end
+
+function docker-run-ti
+   docker container run -ti $argv
+end

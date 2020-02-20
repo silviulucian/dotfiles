@@ -1,15 +1,15 @@
 # For configurations examples see:
 # https://github.com/remiprev/teamocil#examples
 windows:
-  - name: sample
-    root: ~
+  - name: bpr
+    root: ~/bpr
     layout: main-vertical
     panes:
       - commands:
-        - echo "left"
+        - brew services start gitlab-runner
+        - lando start
       - commands:
-        - echo "top"
-        - echo "right"
+        - sleep 3
+        - lando php artisan queue:work
       - commands:
-        - echo "bottom"
-        - echo "right"
+        - yarn watch
