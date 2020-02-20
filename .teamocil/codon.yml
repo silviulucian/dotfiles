@@ -1,0 +1,14 @@
+# For configurations examples see:
+# https://github.com/remiprev/teamocil#examples
+windows:
+  - name: codon
+    root: ~/codon
+    layout: main-vertical
+    panes:
+      - commands:
+        - lando start
+      - commands:
+        - sleep 5
+        - lando php artisan queue:work
+      - commands:
+        - yarn watch

@@ -1,15 +1,14 @@
 # For configurations examples see:
 # https://github.com/remiprev/teamocil#examples
 windows:
-  - name: bpr
-    root: ~/bpr
+  - name: turbo
+    root: ~/turbo
     layout: main-vertical
     panes:
       - commands:
-        - brew services start gitlab-runner
         - lando start
       - commands:
-        - sleep 3
+        - sleep 5
         - lando php artisan queue:work
       - commands:
         - yarn watch
