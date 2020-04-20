@@ -1,15 +1,14 @@
 # For configurations examples see:
 # https://github.com/remiprev/teamocil#examples
 windows:
-  - name: turbo
-    root: ~/turbo
+  - name: viz
+    root: ~/viz
     layout: main-vertical
     panes:
       - commands:
-        - lando start
         - cowsay gogogo
       - commands:
         - sleep 7
-        - lando php artisan queue:work
+        - hasura console
       - commands:
-        - yarn watch
+        - docker-compose up

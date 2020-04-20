@@ -7,8 +7,9 @@ windows:
     panes:
       - commands:
         - lando start
+        - cowsay gogogo
       - commands:
-        - sleep 5
+        - sleep 7
         - lando php artisan queue:work
       - commands:
         - yarn watch
