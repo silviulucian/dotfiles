@@ -9,6 +9,7 @@ windows:
         - cowsay gogogo
       - commands:
         - sleep 7
+        - hasura migrate apply
         - hasura console
       - commands:
         - docker-compose up
