@@ -73,7 +73,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   composer
-  git
+  # git
   laravel
   nvm
   yarn
