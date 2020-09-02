@@ -73,10 +73,14 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   composer
-  # git
+  git
   laravel
+  artisan
   nvm
   yarn
+  yarn-completion
+  kubectl
+  fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,3 +110,108 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+
+#
+# Azure
+#------------------------------------------------------------------------------
+
+azinit() {
+  az login
+  az aks get-credentials -n stjude-staging -g rgStagingEastus
+}
+
+
+#
+# Kubernetes
+#------------------------------------------------------------------------------
+
+kctx() {
+  kubectx
+}
+
+kns() {
+  kubens
+}
+
+kin() {
+  k get ingress
+}
+
+kpods() {
+  kgp
+}
+
+_kpod() {
+  kpods | fzf | awk -F ' ' '{print $1}'
+}
+
+ktty() {
+  if [ "$1" != "" ]
+  then
+    keti "$1" -- bash
+  else
+    keti $(_kpod) -- bash
+  fi
+}
+
+klog() {
+  if [ "$1" != "" ]
+  then
+    klf "$1"
+  else
+    klf $(_kpod)
+  fi
+}
+
+kgo() {
+  kns
+  echo ""
+
+  echo "*** Ingress:"
+  kin
+  echo ""
+
+  echo "*** Pods:"
+  kpods
+  echo ""
+}
+
+jxlog() {
+  kubectl config set-context --current --namespace jx
+  jx get build logs
+}
+
+
+#
+# Dev
+#------------------------------------------------------------------------------
+
+senv() {
+  cd ~/setupenv
+  subl .
+}
+
+arti() {
+  lando artisan "$1"
+}
+
+# The artisan plugin has to be enabled
+compdef _artisan_add_completion arti
+
+yarni() {
+  lando yarn "$1"
+}
+
+# The yarn-completion plugin has to be enabled
+compdef _yc_zsh_better_yarn_completion yarni
+
+compi() {
+  lando composer "$1"
+}
+
+# The composer plugin has to be enabled
+compdef _composer compi
+
