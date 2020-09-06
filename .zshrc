@@ -149,18 +149,18 @@ _kpod() {
 }
 
 ktty() {
-  if [ "$1" != "" ]
+  if [ "$@" != "" ]
   then
-    keti "$1" -- bash
+    keti "$@" -- bash
   else
     keti $(_kpod) -- bash
   fi
 }
 
 klog() {
-  if [ "$1" != "" ]
+  if [ "$@" != "" ]
   then
-    klf "$1"
+    klf "$@"
   else
     klf $(_kpod)
   fi
@@ -195,21 +195,21 @@ senv() {
 }
 
 arti() {
-  lando artisan "$1"
+  lando artisan "$@"
 }
 
 # The artisan plugin has to be enabled
 compdef _artisan_add_completion arti
 
 yarni() {
-  lando yarn "$1"
+  lando yarn "$@"
 }
 
 # The yarn-completion plugin has to be enabled
 compdef _yc_zsh_better_yarn_completion yarni
 
 compi() {
-  lando composer "$1"
+  lando composer "$@"
 }
 
 # The composer plugin has to be enabled
