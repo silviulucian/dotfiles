@@ -72,15 +72,17 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  composer
-  git
-  laravel
   artisan
+  composer
+  docker
+  docker-compose
+  fzf-tab
+  git
+  kubectl
+  laravel
   nvm
   yarn
   yarn-completion
-  kubectl
-  fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,6 +123,22 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 azinit() {
   az login
   az aks get-credentials -n stjude-staging -g rgStagingEastus
+}
+
+
+#
+# Docker
+#------------------------------------------------------------------------------
+
+docker-destroy() {
+  read REPLY\?"This will stop and remove all Docker instances, volumes and images. Continue? (y/N)"
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo "You asked for it..."
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+    docker rmi $(docker images -q)
+  fi
 }
 
 

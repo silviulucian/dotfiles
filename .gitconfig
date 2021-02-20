@@ -9,10 +9,12 @@
   co = checkout
   cob = checkout -B # Switch to a branch, creating it if necessary
   c = commit -v
-  p = !"git pull; git submodule foreach git pull origin master" # Pull in remote changes for the current repository and all its submodules
+  p = !"git pull --autostash --prune; git submodule foreach git pull origin master" # Pull in remote changes for the current repository and all its submodules
   pf = push --force-with-lease
   po = push origin
+  puo = push --set-upstream origin
   ri = rebase --interactive
+  rc = rebase --continue
   s = status
   l = log --abbrev-commit --all --graph --decorate --date=relative
   unstage = reset HEAD --
@@ -84,10 +86,10 @@
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [commit]
   gpgSign = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
