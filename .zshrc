@@ -121,7 +121,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #------------------------------------------------------------------------------
 
 code() {
-  ssh code
+  ssh code.lucianv.dev
 }
 
 arti() {
