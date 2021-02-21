@@ -126,94 +126,6 @@ if [ "$(uname 2> /dev/null)" == "Linux" ]; then
   export LC_ALL=en_US.UTF-8
 fi
 
-
-#
-# Azure
-#------------------------------------------------------------------------------
-
-azinit() {
-  az login
-  az aks get-credentials -n stjude-staging -g rgStagingEastus
-}
-
-
-#
-# Docker
-#------------------------------------------------------------------------------
-
-docker-destroy() {
-  read REPLY\?"This will stop and remove all Docker instances, volumes and images. Continue? (y/N)"
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
-    echo "You asked for it..."
-    docker stop $(docker ps -aq)
-    docker rm $(docker ps -aq)
-    docker rmi $(docker images -q)
-  fi
-}
-
-
-#
-# Kubernetes
-#------------------------------------------------------------------------------
-
-kctx() {
-  kubectx
-}
-
-kns() {
-  kubens
-}
-
-kin() {
-  k get ingress
-}
-
-kpods() {
-  kgp
-}
-
-_kpod() {
-  kpods | fzf | awk -F ' ' '{print $1}'
-}
-
-ktty() {
-  if [ "$@" != "" ]
-  then
-    keti "$@" -- bash
-  else
-    keti $(_kpod) -- bash
-  fi
-}
-
-klog() {
-  if [ "$@" != "" ]
-  then
-    klf "$@"
-  else
-    klf $(_kpod)
-  fi
-}
-
-kgo() {
-  kns
-  echo ""
-
-  echo "*** Ingress:"
-  kin
-  echo ""
-
-  echo "*** Pods:"
-  kpods
-  echo ""
-}
-
-jxlog() {
-  kubectl config set-context --current --namespace jx
-  jx get build logs
-}
-
-
 #
 # Dev
 #------------------------------------------------------------------------------
@@ -253,4 +165,3 @@ docker-destroy() {
     docker rmi $(docker images -q)
   fi
 }
-
