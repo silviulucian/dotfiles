@@ -114,24 +114,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.tfenv/bin:$PATH"
 
 
 #
 # Locale
 #------------------------------------------------------------------------------
 
-if [ "$(uname 2> /dev/null)" == "Linux" ]; then
-  export LANGUAGE=en_US.UTF-8
-  export LANG=en_US.UTF-8
-  export LC_ALL=en_US.UTF-8
-fi
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+  echo "( ͡° ͜ʖ ͡°) dotfiles synced"
+  cd ~/setupenv
+  source sync-dotfiles.sh >/dev/null 2>&1
+  cd ~
 
 #
 # Dev
 #------------------------------------------------------------------------------
 
 code() {
-  ssh code.lucianv.dev
+  ssh code
 }
 
 arti() {
@@ -152,8 +156,18 @@ compi() {
   lando composer "$@"
 }
 
+depi() {
+  lando php vendor/bin/dep "$@"
+}
+
 # The composer plugin has to be enabled
 compdef _composer compi
+
+fixup() {
+  git add .
+  git c -m "fixup"
+  git po
+}
 
 docker-destroy() {
   read REPLY\?"This will stop and remove all Docker instances, volumes and images. Continue? (y/N)"
@@ -164,4 +178,8 @@ docker-destroy() {
     docker rm $(docker ps -aq)
     docker rmi $(docker images -q)
   fi
+}
+
+ssenv() {
+  subl ~/setupenv
 }
